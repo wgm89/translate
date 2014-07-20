@@ -1,5 +1,9 @@
 #!/usr/bin/php
 <?php
+/*
+ *  saeed <wgmone@163.com>
+ *  2014/07/20 - published
+ */
 $api = 'http://dict.youdao.com/fsearch?q=';
 if (count($argv) > 1 && $argv[count($argv)-1] != '-h') {
     $arg = array_shift($argv);
