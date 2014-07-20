@@ -16,15 +16,6 @@ if (count($argv) > 1 && $argv[count($argv)-1] != '-h') {
     _usage();
 }
 
-function _usage(){
-
-    echo <<<USAGE
-Usage: ./translate.php [word]
-
-USAGE;
-    exit(0);
-}
-
 function dataPrint($data){
 
     $trans = array();
@@ -177,4 +168,14 @@ function str_len($str){
     return $count ;
 
 }
+
+function _usage(){
+
+    echo <<<USAGE
+Usage: ./translate.php [word]
+
+USAGE;
+    exit(0);
+}
+
 ?>
