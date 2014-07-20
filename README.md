@@ -1,8 +1,11 @@
 ##Chinese-English Translation
 
+
 ###How-To
 
-./translate [word]
+* 1 open your terminal
+
+* 2 ./translate [word]
 
 
 alias translate='/mydir/translate'
