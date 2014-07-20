@@ -38,7 +38,6 @@ function dataPrint($data){
     }
     $str_max_len = 0;
     ob_start();
-    echo PHP_EOL;
     foreach ($trans as $tk=>$tv){
         $str_max_len = max(str_len($tk) , $str_max_len);
         echo  " \033[0;36m[".$tk."]\033[0m", PHP_EOL;
@@ -56,15 +55,28 @@ function dataPrint($data){
             }
         }
     }
-    echo  PHP_EOL;
     $content = ob_get_contents();
     ob_end_clean();
     $str_max_len += 10;
     if ($content){
         $prechr = chr(226).chr(149);
         echo $prechr.chr(148).str_pad('', $str_max_len * 3, $prechr.chr(144)),$prechr.chr(151),PHP_EOL;
+        echo PHP_EOL;
         echo $content;
+        echo  PHP_EOL;
         echo $prechr.chr(154),str_pad('', $str_max_len * 3, $prechr.chr(144)),$prechr.chr(157),PHP_EOL ;
+    }else{
+
+    echo <<<NOTFIND
+     _   _ _   _ _     _     
+     | \ | | | | | |   | |    
+     |  \| | | | | |   | |    
+     | |\  | |_| | |___| |___ 
+     |_| \_|\___/|_____|_____|
+
+NOTFIND;
+    echo PHP_EOL;
+
     }
 
 }
