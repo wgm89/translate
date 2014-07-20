@@ -50,7 +50,7 @@ function dataPrint($data){
                 $str_max_len = max(str_len($tv_key) , $str_max_len);
                 echo "     \033[0;33m[".$tv_key."]\033[0m", PHP_EOL;
                 foreach($tv_val as $tv_val_key=>$tv_val_val){
-                    $str_max_len = max(str_len($tv_val_key) , $str_max_len);
+                    $str_max_len = max(str_len($tv_val_val) , $str_max_len);
                     echo "     ",$tv_val_key+1,'> ',$tv_val_val, PHP_EOL;
                 }
             }else{
@@ -64,11 +64,10 @@ function dataPrint($data){
     $str_max_len += 10;
     if ($content){
         $prechr = chr(226).chr(149);
-        echo $prechr.chr(148).str_pad('', $str_max_len * 3, $prechr.chr(144)),$prechr.chr(151),PHP_EOL;
-        echo PHP_EOL;
-        echo $content;
-        echo  PHP_EOL;
-        echo $prechr.chr(154),str_pad('', $str_max_len * 3, $prechr.chr(144)),$prechr.chr(157),PHP_EOL ;
+        echo $prechr.chr(148),$line = str_pad('', $str_max_len * 3, $prechr.chr(144)),
+            $prechr.chr(151),PHP_EOL;
+        echo PHP_EOL, $content, PHP_EOL;
+        echo $prechr.chr(154),$line,$prechr.chr(157),PHP_EOL ;
     }else{
 
     echo <<<NOTFIND
