@@ -1,6 +1,5 @@
 ##Chinese-English Translation
 
-
 ###How-To
 
 * 1 open your terminal
@@ -9,3 +8,6 @@
 
 
 alias translate='/mydir/translate'
+
+## Demo
+![demo](https://github.com/xihaxixi/translate/raw/master/demo.png)
